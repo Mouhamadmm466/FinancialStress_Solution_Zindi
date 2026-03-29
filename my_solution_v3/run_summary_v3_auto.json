@@ -1,0 +1,59 @@
+{
+  "feature_count": 926,
+  "numeric_features": 921,
+  "categorical_features": 5,
+  "feature_set": "v3",
+  "n_splits": 5,
+  "model_scores": {
+    "catboost": {
+      "logloss": 0.2352904473667917,
+      "auc": 0.9176278039215686,
+      "competition_score": 0.8258768531485524
+    },
+    "hist_gb": {
+      "logloss": 0.23992630240884205,
+      "auc": 0.9145808529411765,
+      "competition_score": 0.8218765597311654
+    },
+    "logistic_anchor": {
+      "logloss": 0.30724683465022007,
+      "auc": 0.8473716299019608,
+      "competition_score": 0.7546005511706523
+    }
+  },
+  "selected_strategy": {
+    "name": "weighted_top2_calibrated",
+    "base_name": "weighted_top2",
+    "mode": "calibrated",
+    "members": [
+      "catboost",
+      "hist_gb"
+    ],
+    "weights": {
+      "catboost": 0.9093763221312825,
+      "hist_gb": 0.09062367786871744
+    },
+    "optimized_weights_from_rerun": {
+      "catboost": 0.9093763221312825,
+      "hist_gb": 0.09062367786871744
+    }
+  },
+  "catboost_params": {
+    "task_type": "CPU",
+    "devices": "0"
+  },
+  "hist_params": {},
+  "lightgbm_params": {},
+  "xgboost_params": {},
+  "selected_oof": {
+    "logloss": 0.23348566452214956,
+    "auc": 0.9180036617647059,
+    "competition_score": 0.8271100659925926
+  },
+  "calibration_candidates": {
+    "sigmoid": 0.817791018845625,
+    "isotonic": 0.8271100659925926
+  },
+  "mean_abs_gap_full_vs_cv_test": 0.0,
+  "submission_path": "/Users/mouhamad/Desktop/Zindi/my_solution_v3/submissions/submission.csv"
+}
