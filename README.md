@@ -1,5 +1,7 @@
 # Zindi Liquidity Stress Solution V3
 
+This repo contains my solution to "AI4EAC Liquidity Stress Early Warning Challenge ". It predicts the probability that a mobile money customer will experience liquidity stress in the next 30 days. It uses the customer’s last 6 months of behavior, creates features that describe changes in income, spending, balance, and activity, then trains several models and chooses the best final prediction strategy.
+
 ## Overview
 
 This package contains the code and documentation for the `submission_v3_auto.csv` solution. The goal of the model is to predict the probability that a mobile money customer will experience liquidity stress within the next 30 days. The solution is designed as a probability estimation pipeline, with strong attention to calibrated predictions because the competition score gives more weight to log loss than to ranking alone.
